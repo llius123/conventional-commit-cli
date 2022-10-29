@@ -32,12 +32,30 @@ const conventionals_commits_options = [
   },
 ];
 
+const conventionals_commits_scope = [
+  {
+    name: "Scope 1",
+    value: "Scope-1",
+  },
+  new inquirer.Separator(),
+  {
+    name: "New scope",
+    value: null,
+  },
+];
+
 const questions = [
   {
     type: "list",
-    name: "Type",
+    name: "type",
     message: "Type",
     choices: conventionals_commits_options,
+  },
+  {
+    type: "list",
+    name: "scope",
+    message: "Scope",
+    choices: conventionals_commits_scope,
   },
 ];
 
