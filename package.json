@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^9.1.4"
+    "inquirer": "^9.1.4",
+    "inquirer-maxlength-input-prompt": "^1.0.2"
   },
   "type": "module"
 }

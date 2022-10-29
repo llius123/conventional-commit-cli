@@ -1,4 +1,5 @@
 import inquirer from "inquirer";
+import MaxLengthInputPrompt from "inquirer-maxlength-input-prompt";
 
 const conventionals_commits_options = [
   {
@@ -68,7 +69,14 @@ const questions = [
       return false;
     },
   },
+  {
+    type: "maxlength-input",
+    name: "title",
+    message: "Title",
+    maxLength: 50,
+  },
 ];
+inquirer.registerPrompt("maxlength-input", MaxLengthInputPrompt);
 
 inquirer.prompt(questions).then((answers) => {
   console.log(JSON.stringify(answers, null, "  "));
