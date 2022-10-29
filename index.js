@@ -57,6 +57,17 @@ const questions = [
     message: "Scope",
     choices: conventionals_commits_scope,
   },
+  {
+    type: "input",
+    name: "new_scope",
+    message: "New Scope",
+    when: (allQuestions) => {
+      if (allQuestions.scope === null) {
+        return true;
+      }
+      return false;
+    },
+  },
 ];
 
 inquirer.prompt(questions).then((answers) => {
