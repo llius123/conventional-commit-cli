@@ -75,6 +75,11 @@ const questions = [
     message: "Title",
     maxLength: 50,
   },
+  {
+    type: "input",
+    name: "description",
+    message: "Description",
+  },
 ];
 inquirer.registerPrompt("maxlength-input", MaxLengthInputPrompt);
 
